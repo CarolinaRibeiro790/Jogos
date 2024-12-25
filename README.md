@@ -15,6 +15,7 @@
 ![image](https://github.com/user-attachments/assets/dc78e096-ad5b-47ad-a861-2207f2d3a936)
 
 ### Para startar, digitar no terminal:  
-npm run dev *(inicia o servidor do projeto)* <br>
+npm i (instala as dependências) <br>
+npm run dev (inicia o servidor do projeto) <br>
 1.  Antes é preciso criar um banco com o nome jogos <br>
 2. A minha porta do banco está configurada na 3307, se estiver em outra porta o seu banco alterar no arquivo database.js, dentro da pasta database.
