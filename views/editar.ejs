@@ -1,0 +1,35 @@
+<%- include ('partials/header.ejs') %>
+
+    <body>
+        <div class="container mt-5">
+            <div class="card" id="form-question">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h6 class="text-primary p-1">Editar Jogos</h6>
+                    <a class="btn btn-primary btn-sm" href="/">Home</a>
+                </div>
+
+                <div class="card-body">
+                    <hr>
+                    <form method="POST" action="/editar" id="form">
+                        <input type="hidden" name="id" value="<%= game.id %>">
+                        <div class="row">
+                            <div class="col">
+                                <label for="title">Title</label>
+                                <input type="text" name="title" id="title" placeholder="Title" class="form-control"
+                                    required value="<%= game.title %>">
+                            </div>
+                            <div class="col">
+                                <label for="year">Year</label>
+                                <input type="text" name="year" id="year" placeholder="Year" class="form-control"
+                                    required value="<%= game.year %>">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end p-5">
+                            <button type="submit" class="btn btn-success btn-sm">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </body>
+
+    <%- include ('partials/footer.ejs') %>

@@ -1,0 +1,40 @@
+<%- include ('partials/header.ejs')%>
+<body>
+
+    <div class="container" style="margin-top: 5vh;">
+
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4 class="text-primary p-1">Jogos</h4>
+            <a class="btn btn-success btn-sm" href="/criar">Adicionar jogo</a>
+        </div>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% for( let i = 0; i < games.length; i++ ) { %>
+                
+                    <tr>
+                        <td><%- games[i]['id'] %></td>
+                        <td><%- games[i]['title'] %></td>
+                        <td><%- games[i]['year'] %></td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" href="/edit/<%- games[i]['id'] %>">Editar</a>
+                            <a class="btn btn-danger btn-sm" href="/delete/<%- games[i]['id'] %>">Excluir</a>
+                        </td>
+                    </tr>
+    
+                <% } %>
+            </tbody>
+        </table>
+          
+    </div>
+    
+</body>
+<%- include ('partials/footer.ejs') %>
